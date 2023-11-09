@@ -21,6 +21,9 @@ header {
 .h_logo {
   width: 58px;
 }
+.h_logo a:nth-child(2) {
+  display: none;
+}
 .h_pc_menu {
   display: none;
 }
@@ -346,6 +349,9 @@ CONTENT
     color: #ea5028;
     opacity: 1;
   }
+   .h_pc_menu.active {
+    color: white; 
+   }
   .nav_icon {
     display: block;
     width: 40px;

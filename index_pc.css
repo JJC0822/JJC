@@ -157,7 +157,7 @@
     border-radius: 50%;
     background-color: #ea5028;
 
-    transform: scale(1);
+    transform: scale(1.4);
     /* display: none; */
   }
   .a_container .a_circle_wrap .a_circle_bg .a_bg_inner .metro_bg {

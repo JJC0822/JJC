@@ -15,6 +15,46 @@ ScrollTrigger.create({
   },
 });
 
+const 헤더 = document.querySelector('.h_pc_menu');
+const about = document.querySelector('.about');
+const logoW = document.querySelector('.h_logo a:nth-child(2)')
+const logo = document.querySelector('.logo')
+const contact = document.querySelector('.contact')
+
+addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const abouts = about.offsetTop;
+  const contactS = contact.offsetTop;
+
+  if (scrollY > abouts) {
+    헤더.classList.add('active');
+    logo.style.display = 'none';
+    logoW.style.display = 'block';
+  } else{
+    헤더.classList.remove('active');
+    logo.style.display = 'block';
+    logoW.style.display = 'none';
+  };
+
+  if (scrollY > contactS) {
+    헤더.classList.remove('active');
+    logoW.style.display = 'none';
+    logo.style.display = 'block';
+  }
+
+/*   if (scrollY > contactS) {
+    헤더.classList.remove('active');
+    logoW.style.display = 'none';
+    logo.style.display = 'block';
+  } else{
+    헤더.classList.add('active');
+    logoW.style.display = 'block';
+    logo.style.display = 'none';
+
+  }; */
+});
+
+
 // about clicle
 gsap.from(".a_circle_bg", {
   scrollTrigger: {
