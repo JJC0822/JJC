@@ -1,4 +1,5 @@
 const container = document.querySelector(".smooth-scroll-container");
+/*
 const group1 = document.querySelector(".group1");
 const group2 = document.querySelector(".group2");
 const group3 = document.querySelector(".group3");
@@ -15,7 +16,8 @@ const url_10 = document.querySelector(".url_10");
 const url_11 = document.querySelector(".url_11");
 const url_12 = document.querySelector(".url_12");
 const body = document.querySelector(".body_img");
-
+*/
+/*
 ScrollTrigger.matchMedia({
   "(min-width: 800px)": function () {
     gsap.to(".body_img", {
@@ -198,7 +200,7 @@ ScrollTrigger.matchMedia({
 
   all: function () {},
 });
-
+*/
 // header side menu
 //토글메뉴
 const elem = document.querySelector("#nav-bg"),
