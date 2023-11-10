@@ -1,10 +1,13 @@
 gsap.registerPlugin(ScrollTrigger);
+
 // header menu
-const showNav = gsap.from(".h_pc_menu", {
-  opacity: 0,
-  paused: true,
-  duration: 0.3,
-});
+const showNav = gsap
+  .from(".h_pc_menu", {
+    opacity: 0,
+    paused: true,
+    duration: 0.3,
+  })
+  .progress(1);
 
 ScrollTrigger.create({
   start: "top top",
@@ -15,34 +18,44 @@ ScrollTrigger.create({
   },
 });
 
-const 헤더 = document.querySelector('.h_pc_menu');
-const about = document.querySelector('.about');
-const logoW = document.querySelector('.h_logo a:nth-child(2)')
-const logo = document.querySelector('.logo')
-const contact = document.querySelector('.contact')
+const 헤더 = document.querySelector(".h_pc_menu");
+const about = document.querySelector(".about");
+const logoW = document.querySelector(".h_logo a:nth-child(2)");
+const logo = document.querySelector(".logo");
+const contact = document.querySelector(".contact");
+const introImg = document.querySelector(".intro_imgs");
+const introTxt = document.querySelector(".intro_txt");
 
-addEventListener('scroll', () => {
+addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   const abouts = about.offsetTop;
   const contactS = contact.offsetTop;
+  const introImgS = introImg.offsetTop;
+  const introTxtS = introImg.offsetTop;
 
   if (scrollY > abouts) {
-    헤더.classList.add('active');
-    logo.style.display = 'none';
-    logoW.style.display = 'block';
-  } else{
-    헤더.classList.remove('active');
-    logo.style.display = 'block';
-    logoW.style.display = 'none';
-  };
-
-  if (scrollY > contactS) {
-    헤더.classList.remove('active');
-    logoW.style.display = 'none';
-    logo.style.display = 'block';
+    헤더.classList.add("active");
+    logo.style.display = "none";
+    logoW.style.display = "block";
+  } else {
+    헤더.classList.remove("active");
+    logo.style.display = "block";
+    logoW.style.display = "none";
   }
 
-/*   if (scrollY > contactS) {
+  if (scrollY > contactS) {
+    헤더.classList.remove("active");
+    logoW.style.display = "none";
+    logo.style.display = "block";
+  }
+  if (scrollY < introImgS) {
+    introImg.style.transform = `translateY(-${scrollY / 10}px)`;
+  }
+  if (scrollY < introTxtS) {
+    introTxt.style.transform = `translateY(-${scrollY / 10}px)`;
+  }
+
+  /*   if (scrollY > contactS) {
     헤더.classList.remove('active');
     logoW.style.display = 'none';
     logo.style.display = 'block';
@@ -53,7 +66,6 @@ addEventListener('scroll', () => {
 
   }; */
 });
-
 
 // about clicle
 gsap.from(".a_circle_bg", {
@@ -223,4 +235,13 @@ fClose.addEventListener("click", () => {
 
 fOpen.addEventListener("click", () => {
   fSubBg.style.display = "block";
+});
+
+const mainSticky = document.querySelector(".main_sticky");
+
+ScrollTrigger.create({
+  trigger: mainSticky,
+  start: "center center",
+  pin: true,
+  pinSpacing: false,
 });
