@@ -28,9 +28,13 @@ button {
   font-size: 1.1rem;
   display: block;
 }
+.txt_inline {
+  display: block;
+}
 
 /* main_intro */
 .main_intro {
+  height: 120vh;
   overflow: hidden;
   position: sticky;
   top: 0;
@@ -38,6 +42,7 @@ button {
   background-color: #000;
   background-image: url(./images/star-tile.svg);
   padding-top: 15%;
+  box-sizing: border-box;
   /* margin-bottom: 100px; */
 }
 .main_sticky {
@@ -88,7 +93,7 @@ button {
 
 .meteor_wrap img {
   width: 20%;
-  transform: rotate(12deg);
+  transform: rotate(13deg);
   position: relative;
 }
 .meteor_wrap img:nth-child(1) {
