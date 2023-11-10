@@ -151,6 +151,12 @@ gsap.to(".smooth-scroll-item", {
 const brochurOpenBtn = document.querySelector(".inner_brochur_btn");
 const bsrochurCloseBtn = document.querySelector(".brochure_close_btn");
 const brochureModal = document.querySelector(".c_brochure_modal");
+
+//main 브로슈어 성격 제거
+brochurOpenBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+});
+
 // 모달 열기
 brochurOpenBtn.addEventListener("click", () => {
   brochureModal.style.display = "block";
