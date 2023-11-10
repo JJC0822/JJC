@@ -6,6 +6,12 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+
+/* header 메뉴 페이지 표시 */
+.h_top .h_pc_menu .nav_works {
+  border-bottom: 5px solid #ea5028;
+}
+
 .w_body_img {
   background-image: url(./images/star-tile.svg);
 }
