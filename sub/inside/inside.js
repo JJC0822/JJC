@@ -30,7 +30,7 @@ const i_info3 = document.querySelector(".boo");
 
 // ScrollTrigger를 사용하여 요소를 트리거하고 애니메이션을 정의
 gsap.to(".smooth-scroll-item", {
-  y: -500, // 원하는 애니메이션 효과 설정
+  y: -300, // 원하는 애니메이션 효과 설정
   scrollTrigger: {
     trigger: container,
     start: "top top", // 트리거가 언제 시작될지 설정
