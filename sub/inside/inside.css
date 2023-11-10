@@ -4,6 +4,11 @@ body {
   font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
 }
 
+/* header 메뉴 페이지 표시 */
+.h_top .h_pc_menu .nav_inside {
+  border-bottom: 5px solid #ea5028;
+}
+
 /* main */
 .i_svg {
   padding-top: 13%;
@@ -27,7 +32,6 @@ body {
   min-width: 420px;
   max-width: 700px;
   position: relative;
-
 }
 
 .i_svg p {
@@ -139,12 +143,9 @@ body {
   display: none;
 }
 
-
-
 /* pc */
 
 @media (width >= 1200px) {
-
   /* main */
   .inside {
     padding: 0 10%;
@@ -163,7 +164,7 @@ body {
     width: 50%;
     max-width: 600px;
     order: 2;
-    margin: 0 ;
+    margin: 0;
   }
   .i_video h2 {
     margin: 5% 20px;
@@ -273,5 +274,4 @@ body {
     width: 208px;
     right: 420px;
   }
-
 }
