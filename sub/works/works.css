@@ -6,11 +6,9 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
-
-.body_img {
-  background-image: url(./images/work/star-tile.svg);
+.w_body_img {
+  background-image: url(./images/star-tile.svg);
 }
-
 .urlImg > .Img {
   overflow: hidden;
   aspect-ratio: 1 / 1;
@@ -36,7 +34,6 @@ body {
   width: 30%;
   margin: 0 auto;
 }
-
 
 /*    ******* main ******** */
 /* .work_title > h1 {
@@ -177,7 +174,6 @@ body {
     margin-top: 8rem;
   }
 
-  
   .urlImg > .Img > .hidden {
     background-color: transparent;
     transition: 0.4s;

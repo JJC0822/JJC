@@ -1,5 +1,5 @@
 const container = document.querySelector(".smooth-scroll-container");
-/*
+
 const group1 = document.querySelector(".group1");
 const group2 = document.querySelector(".group2");
 const group3 = document.querySelector(".group3");
@@ -15,13 +15,12 @@ const url_9 = document.querySelector(".url_9");
 const url_10 = document.querySelector(".url_10");
 const url_11 = document.querySelector(".url_11");
 const url_12 = document.querySelector(".url_12");
-const body = document.querySelector(".body_img");
-*/
-/*
+const body = document.querySelector(".w_body_img");
+
 ScrollTrigger.matchMedia({
   "(min-width: 800px)": function () {
-    gsap.to(".body_img", {
-      y: 500, // 원하는 애니메이션 효과 설정
+    gsap.to(".w_body_img", {
+      y: 300, // 원하는 애니메이션 효과 설정
       scrollTrigger: {
         trigger: body,
         start: "top top", // 트리거가 언제 시작될지 설정
@@ -30,7 +29,7 @@ ScrollTrigger.matchMedia({
       },
     });
     gsap.to(".smooth-scroll-item", {
-      y: -300, // 원하는 애니메이션 효과 설정
+      y: -400, // 원하는 애니메이션 효과 설정
       scrollTrigger: {
         trigger: container,
         start: "top top", // 트리거가 언제 시작될지 설정
@@ -200,7 +199,7 @@ ScrollTrigger.matchMedia({
 
   all: function () {},
 });
-*/
+
 // header side menu
 //토글메뉴
 const elem = document.querySelector("#nav-bg"),
@@ -276,4 +275,23 @@ fClose.addEventListener("click", () => {
 
 fOpen.addEventListener("click", () => {
   fSubBg.style.display = "block";
+});
+
+gsap.registerPlugin(ScrollTrigger);
+// header menu
+const showNav = gsap
+  .from(".h_pc_menu", {
+    opacity: 0,
+    paused: true,
+    duration: 0.3,
+  })
+  .progress(1);
+
+ScrollTrigger.create({
+  start: "top top",
+  end: 99999,
+
+  onUpdate: (self) => {
+    self.direction === -1 ? showNav.play() : showNav.reverse();
+  },
 });
