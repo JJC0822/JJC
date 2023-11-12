@@ -18,8 +18,8 @@ body {
 }
 
 .i_svg_i .page_title_img {
-  min-width: 380px;
-  max-width: 480px;
+  min-width: 180px;
+  max-width: 280px;
   position: absolute;
   left: 0;
   top: 0;
@@ -29,8 +29,8 @@ body {
 }
 
 .i_svg_i .page_title_txt {
-  min-width: 420px;
-  max-width: 700px;
+  min-width: 220px;
+  max-width: 350px;
   position: relative;
 }
 
@@ -153,6 +153,24 @@ body {
   .i_svg br {
     display: none;
   }
+
+  .i_svg_i .page_title_img {
+    min-width: 380px;
+    max-width: 480px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 8% auto;
+  }
+  
+  .i_svg_i .page_title_txt {
+    min-width: 420px;
+    max-width: 700px;
+    position: relative;
+  }
+
   /* video */
   .i_video {
     text-align: center;
