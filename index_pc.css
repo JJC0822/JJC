@@ -28,7 +28,7 @@
   .intro_bg #pc_bg {
     display: block;
     position: absolute;
-    top: 1000px;
+    top: 730px;
     left: -1000px;
     z-index: 10;
     height: 70%;
@@ -92,7 +92,7 @@
     transition: 0.2s;
     width: 350px;
     position: relative;
-    top: 90px;
+    top: 45px;
     left: 37%;
   }
   .intro_imgs img:nth-child(2) {
