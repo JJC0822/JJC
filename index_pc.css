@@ -136,6 +136,10 @@
   }
   .w_works .w_work p {
     font-size: 1.25rem;
+    transition: 0.6s;
+  }
+  .work_img:hover + p {
+    color: #ea5028;
   }
 
   /*** about ***/
