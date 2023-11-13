@@ -28,7 +28,7 @@
   .intro_bg #pc_bg {
     display: block;
     position: absolute;
-    top: 730px;
+    top: 780px;
     left: -1000px;
     z-index: 10;
     height: 70%;
